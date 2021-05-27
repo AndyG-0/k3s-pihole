@@ -16,7 +16,7 @@ pipeline {
             steps {
                     echo 'Deploying using helm...'
                     sh 'export KUBECONFIG=/var/lib/jenkins/config'
-                    sh 'helm upgrade --install --version \'1.9.0\' --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
+                    sh 'helm upgrade --install --version \'1.7.21\' --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
             }
         }
     }
