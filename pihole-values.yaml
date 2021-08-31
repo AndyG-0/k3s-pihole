@@ -86,7 +86,7 @@ serviceWeb:
     enabled: true
 
     # -- The port of the web HTTPS service
-    port: 443
+    port: 80
 
   # -- `spec.type` for the web interface Service
   type: ClusterIP
