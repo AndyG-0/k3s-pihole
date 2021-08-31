@@ -18,6 +18,7 @@ pipeline {
                     sh 'export KUBECONFIG=/var/lib/jenkins/config'
                     sh 'helm upgrade --install --version \'2.1.2\' --dry-run --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
             }
+        }
         stage('Deploy to k3s') {
             when {
                 expression {
