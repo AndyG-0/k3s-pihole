@@ -75,7 +75,7 @@ serviceWeb:
   http:
 
     # -- Generate a service for HTTP traffic
-    enabled: false
+    enabled: true
 
     # -- The port of the web HTTP service
     port: 80
@@ -83,7 +83,7 @@ serviceWeb:
   # -- Configuration for the HTTPS web interface listener
   https:
     # -- Generate a service for HTTPS traffic
-    enabled: true
+    enabled: false
 
     # -- The port of the web HTTPS service
     port: 80
