@@ -15,8 +15,7 @@ pipeline {
             }
             steps {
                     echo 'Deploying using helm...'
-                    sh 'export KUBECONFIG=/var/lib/jenkins/config'
-                    sh 'helm upgrade --install --version \'2.1.2\' --dry-run --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
+                    sh 'export KUBECONFIG=/var/lib/jenkins/config && helm upgrade --install --version \'2.1.2\' --dry-run --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
             }
         }
         stage('Deploy to k3s') {
@@ -33,8 +32,7 @@ pipeline {
             }
             steps {
                     echo 'Deploying using helm...'
-                    sh 'export KUBECONFIG=/var/lib/jenkins/config'
-                    sh 'helm upgrade --install --version \'2.1.2\' --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
+                    sh 'export KUBECONFIG=/var/lib/jenkins/config && helm upgrade --install --version \'2.1.2\' --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
             }
         }
     }
