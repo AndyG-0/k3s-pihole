@@ -158,7 +158,7 @@ persistentVolumeClaim:
   enabled: true
 
   # -- specify an existing `PersistentVolumeClaim` to use
-  # existingClaim: ""
+  existingClaim: "pihole"
 
   # -- Annotations for the `PersitentVolumeClaim`
   annotations: {}
