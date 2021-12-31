@@ -2,11 +2,6 @@ pipeline {
     agent any
     stages {
         stage('Helm Dry Run') {
-            when {
-                expression {
-                    env.BRANCH_NAME == 'master'
-                }
-            }
             agent {
                 docker {
                     image 'dtzar/helm-kubectl:latest'
