@@ -28,6 +28,7 @@ pipeline {
             }
             steps {
                     echo 'Deploying using helm...'
+                    sh 'helm repo add mojo2600 https://mojo2600.github.io/pihole-kubernetes/ && helm repo update'
                     sh 'export KUBECONFIG=/var/lib/jenkins/config && helm upgrade --install --version \'2.5.3\' --namespace pihole --values pihole-values.yaml pihole mojo2600/pihole'
             }
         }
