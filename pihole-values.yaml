@@ -18,7 +18,7 @@ image:
   # -- the repostory to pull the image from
   repository: "pihole/pihole"
   # -- the docker tag
-  tag: 2021.12.1
+  tag: 2022.07.1
   # -- the pull policy
   pullPolicy: IfNotPresent
 
@@ -357,7 +357,7 @@ monitoring:
     port: 9617
     image:
       repository: ekofr/pihole-exporter
-      tag: 0.0.10
+      tag: 0.3.0
       pullPolicy: IfNotPresent
     resources:
       limits:
